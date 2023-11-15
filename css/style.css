@@ -242,6 +242,9 @@ position: fixed;
 left:45%;
 top:60%;
 transform: translate(-50%, -50%);
+
+animation-name: blink;
+animation-duration: 2s;
 }
 
 .buttons-menu{
@@ -288,7 +291,16 @@ transform: translate(-50%, -50%);
   transform: translate(-50%, 0);
 
   width: 9rem;
+
+  animation-name: blink;
+  animation-duration: 2s;
 }
+@keyframes blink {
+  0%   {box-shadow: 0 0 30rem white;}
+  50%  {box-shadow: 0 0 0rem black;}
+  100% {box-shadow: 0 0 30rem white;}
+}
+
 .close-menuinfo-button{
   position: fixed;
   display: none;
@@ -299,8 +311,10 @@ transform: translate(-50%, -50%);
   transform: translate(-50%, 0);
 
   width: 9rem;
-}
 
+  animation-name: blink;
+  animation-duration: 2s;
+}
 
 /*text of buttons*/
 .text-div{
@@ -345,8 +359,8 @@ transform: translate(-50%, -50%);
 }
 /* Images Size big view on click!!!*/
 .img-big{
-  max-height: 80%;
-  max-width: 80%;
+  max-height: 90%;
+  max-width: 90%;
 
   z-index: 100000;
 
@@ -393,19 +407,22 @@ transform: translate(-50%, -50%);
 }
 /* Video Size small view !!!*/
 .vid-small{
-  padding: 1rem;
+  padding: 4rem;
   max-height: 120rem;
   max-width: 200rem;
   z-index: 0;
 
 
   float: left;
-  mix-blend-mode: exclusion;
+
+  border-radius: 3rem;
+
 }
 /* Video Size big view on click!!!*/
 .vid-big{
-  max-height: 95%;
-  max-width: 95%;
+  padding: 0;
+  height: 95%;
+  width: 95%;
 
   z-index: 100000;
 
@@ -440,7 +457,6 @@ transform: translate(-50%, -50%);
 .p-black{
   color: black
 }
-
 
 
 /*hover action thru vid and img*/
